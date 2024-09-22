@@ -63,6 +63,9 @@ def count_contract_interactions(start_block, end_block):
                  #Count transaction trace for internal calls
                 #print(get_transaction_trace(tx['hash']).get('result'))
                 #print('-----------------------------------')
+                internal_calls = get_transaction_trace(tx['hash']).get('result').get('calls')
+                if internal_calls:
+                    contract_interactions[contract_address] += len(internal_calls)
 
 
 
