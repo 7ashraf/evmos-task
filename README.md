@@ -5,11 +5,11 @@ A script written in pyhton that fetches and analysis on-chain data from the ethe
 ## Architecture and Sorting
 * The script utilizes evmos JSON-RPC api in order to fetch on-chain statistics
 * The script consists of 5 main methods and 2 sorting methods:
-1. get_block_by_number method whic retieves block data given the hex number of the block
-2. send_rpc_request which is a wrapper method for sending any rpc requests
-3. get_balance which retrieves the balance of a given address
-4. is_contract method used to check wether an address is a contract or not
-5. count_contract_interactions the method utlizes all of the on-chain retireving mthods in order to collect all of the data, and process them
+1. `get_block_by_number` method whic retieves block data given the hex number of the block
+2. `send_rpc_request` which is a wrapper method for sending any rpc requests
+3. `get_balance` which retrieves the balance of a given address
+4. `is_contract` method used to check wether an address is a contract or not
+5. `count_contract_interactions` the method utlizes all of the on-chain retireving mthods in order to collect all of the data, and process them
 ### Wallets sorting:
 * The code checks if the reciever is not a smart contract
 * If the reciever is wallet, the balance of the wallet address is fetched then added into mapping of wallet balances
